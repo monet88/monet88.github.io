@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tự học tiếng Trung từ số 0 — Free, 60 phút/ngày, kết hợp MCP (AGY / Codex / ChatGPT Business / Gemini Web)</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --border: rgba(128, 128, 128, 0.25);
+    --surface: rgba(128, 128, 128, 0.08);
+    --surface-strong: rgba(128, 128, 128, 0.14);
+    --muted: #888;
+    --accent: #2563eb;
+    --ok: #1a7f37;
+    --warn: #b35900;
+    --bad: #c0392b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #60a5fa;
+      --ok: #3fb950;
+      --warn: #e3b341;
+      --bad: #f85149;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 15px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 920px;
+    margin: 2rem auto;
+    padding: 0 1.25rem 3rem;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 1.65rem; line-height: 1.3; margin-bottom: .35rem; }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 2.3rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: .35rem;
+  }
+  h3 { font-size: 1.02rem; margin-top: 1.45rem; margin-bottom: .4rem; }
+  .meta { color: var(--muted); font-size: .88rem; margin-bottom: 1.2rem; }
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .75rem 1rem;
+    margin: 1rem 0 1.5rem;
+    font-size: .92rem;
+  }
+  .toc strong { display: block; margin-bottom: .35rem; }
+  .toc a { margin-right: 1rem; white-space: nowrap; }
+  code {
+    font: .88em ui-monospace, Consolas, "Cascadia Mono", monospace;
+    background: var(--surface-strong);
+    padding: .1em .35em;
+    border-radius: 3px;
+  }
+  pre {
+    font: .86em/1.5 ui-monospace, Consolas, "Cascadia Mono", monospace;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .85rem 1rem;
+    overflow-x: auto;
+    margin: .7rem 0 1rem;
+  }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  table { border-collapse: collapse; width: 100%; margin: .8rem 0 1.1rem; font-size: .92rem; }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: .48rem .6rem;
+    border-bottom: 1px solid var(--border);
+  }
+  th { font-weight: 600; background: var(--surface); }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: .3rem 0; }
+  li.box { list-style: none; margin-left: -1.2rem; }
+  .note, .warnbox, .badbox, .okbox {
+    border-left: 3px solid var(--muted);
+    padding: .55rem .9rem;
+    margin: .9rem 0;
+    background: var(--surface);
+    border-radius: 0 4px 4px 0;
+  }
+  .warnbox { border-left-color: var(--warn); }
+  .badbox { border-left-color: var(--bad); }
+  .okbox { border-left-color: var(--ok); }
+  .ok { color: var(--ok); font-weight: 600; }
+  .warn { color: var(--warn); font-weight: 600; }
+  .bad { color: var(--bad); font-weight: 600; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: .8rem;
+    margin: .9rem 0;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .75rem .95rem;
+  }
+  .card strong { display: block; margin-bottom: .25rem; }
+  @media (max-width: 720px) {
+    table { display: block; overflow-x: auto; max-width: 100%; }
+  }
+  @media print {
+    body { max-width: none; margin: 0; padding: 0; }
+    h2, h3 { break-after: avoid; }
+    pre, .card, .note, .warnbox, .badbox, .okbox { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Tự học tiếng Trung từ số 0 — Stack 0đ, 60 phút/ngày + MCP (AGY / Codex / ChatGPT Business / Gemini Web)</h1>
+<p class="meta">
+  Cập nhật &amp; kiểm chứng: <strong>2026-11-17</strong> · Chuẩn <strong>HSK 3.0</strong> (áp dụng thi đại trà từ 13/12/2026) · Hệ chữ ưu tiên: <strong>Giản thể</strong> (có ghi chú khi dùng Phồn thể).<br>
+  Mục tiêu: người chưa biết gì về tiếng Trung đi nhanh nhất, không bị ngọng thanh điệu, không tốn API key trả phí ngoài gói <strong>ChatGPT Business + Codex</strong> và <strong>Gemini Web + AGY</strong> đang có.
+</p>
+
+<div class="toc">
+  <strong>Đi nhanh tới từng phần</strong>
+  <a href="#arch">1. Bản đồ công cụ</a>
+  <a href="#setup">2. Setup từ A–Z</a>
+  <a href="#traps">3. 4 bẫy người Việt</a>
+  <a href="#daily">4. Lịch hằng ngày (60 phút)</a>
+  <a href="#prompts">5. Câu lệnh mẫu</a>
+  <a href="#troubleshoot">6. Xử lý lỗi</a>
+  <a href="#sources">7. Nguồn tham khảo</a>
+</div>
+
+<h2 id="arch">1. Bản đồ công cụ: Mỗi thứ làm đúng 1 việc</h2>
+
+<div class="badbox">
+  <strong>Quy tắc sống còn: Không học chỉ bằng 1 app hay chỉ dùng mỗi Anki.</strong>
+  Anki giữ trí nhớ nhưng không sửa được thanh điệu sai và không giúp nghe hiểu câu dài; AI Voice (ChatGPT/Gemini) đối đáp rất giỏi nhưng hay đoán theo ngữ cảnh nên bỏ qua lỗi thanh điệu. Phải tách 5 lớp rõ ràng bên dưới.
+</div>
+
+<table>
+  <tr><th>Lớp kỹ năng</th><th>Công cụ chính (0đ)</th><th>Công cụ phụ / mở rộng</th><th>Làm việc gì</th></tr>
+  <tr>
+    <td><strong>1. Phát âm &amp; Cao độ F0</strong></td>
+    <td><a href="https://mandarinthewild.com/">Mandarin The Wild</a><br><a href="https://yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">Yoyo Pinyin Chart</a></td>
+    <td><a href="https://nomto.app/vi/hsk/articles/phat-am-tieng-trung">Nomto (bài phát âm VN)</a><br><a href="https://www.sinosplice.com/learn-chinese">Sinosplice Tone Pairs</a></td>
+    <td>Vẽ đường cao độ F0 giọng nói đè lên giọng bản xứ để sửa thanh điệu thật, không đoán mò.</td>
+  </tr>
+  <tr>
+    <td><strong>2. Bộ nhớ dài hạn (SRS)</strong></td>
+    <td><a href="https://apps.ankiweb.net/">Anki Desktop</a> (bật <strong>FSRS</strong>)<br>Add-on AnkiMCP: <code>124672614</code></td>
+    <td>Deck: <a href="https://github.com/oatlayers/forkfed">Forkfed</a> (giao tiếp)<br>hoặc <a href="https://github.com/krmanik/Anki-xiehanzi">Anki-xiehanzi</a> (HSK 3.0)</td>
+    <td>Giữ 90% từ/câu đã học với ít lượt ôn nhất. Anki trên PC/Android/AnkiWeb đều miễn phí; riêng app iOS <em>AnkiMobile</em> giá $24.99 (hoặc mở AnkiWeb trên Safari miễn phí).</td>
+  </tr>
+  <tr>
+    <td><strong>3. AI Agent + MCP</strong></td>
+    <td><strong>AGY / Codex</strong> nối với:<br>• AnkiMCP (<code>127.0.0.1:3141</code>)<br>• <a href="https://github.com/kuibinlin/hsk-mcp-server">HSK MCP</a></td>
+    <td><a href="https://github.com/Gollum-code/tts-mcp-server">tts-mcp-server</a> (Edge-TTS MP3)<br><a href="https://chatterboxlabs.io/connect-ai">Chatterbox MCP</a> (tùy chọn)</td>
+    <td>Lấy đúng từ tiếp theo theo chuẩn HSK 3.0, viết câu <code>i+1</code> kèm giải thích Hán–Việt, sinh audio MP3, tự đẩy vào Anki và khảo bài.</td>
+  </tr>
+  <tr>
+    <td><strong>4. Nghe hiểu &amp; Đọc phân cấp</strong></td>
+    <td>YouTube: <strong>Mandarin Click</strong>, <strong>Lazy Chinese</strong>, <strong>Little Fox Chinese</strong><br>Web đọc: <a href="https://mandarinbean.com/">Mandarin Bean</a></td>
+    <td><a href="https://nhaihsk.com/">Nhai HSK</a> (lộ trình &amp; Hán–Việt)<br><a href="https://www.typingchinese.club/">TypingChinese</a> (gõ Pinyin)<br><a href="https://www.hanlyapp.com/">Hanly</a> (lắp ghép chữ Hán)</td>
+    <td>Nạp ngôn ngữ sống ở tốc độ hiểu được (~80–90% nghĩa), luyện tai bắt thanh nhẹ và biến điệu trong câu thật.</td>
+  </tr>
+  <tr>
+    <td><strong>5. Luyện nói &amp; Soi audio</strong></td>
+    <td><strong>ChatGPT Business Voice</strong><br><strong>Gemini Web</strong> (upload audio)</td>
+    <td>Từ điển: <a href="https://www.pleco.com/">Pleco</a>, <a href="https://hanzii.net/">Hanzii</a>, extension <a href="https://github.com/cschiller/zhongwen/">Zhongwen</a></td>
+    <td>Role-play tình huống bị khóa từ vựng theo Anki; upload file ghi âm/MP3 lên Gemini Web để bóc băng &amp; bắt lỗi nuốt âm, ngữ pháp.</td>
+  </tr>
+</table>
+
+<h2 id="setup">2. Setup Từ Đầu Đến Cuối (Làm 1 lần ~25 phút)</h2>
+
+<h3>Bước 1 — Cài Anki Desktop + bật FSRS + cài AnkiMCP add-on</h3>
+<ol>
+  <li>Tải và cài <a href="https://apps.ankiweb.net/">Anki Desktop</a> (bản <code>25.x</code> trở lên, hiện tại là <code>26.09.4</code>; cần bản mới vì AnkiMCP add-on chạy trên Python 3.13 của Anki 25+). Tạo 1 tài khoản AnkiWeb miễn phí để đồng bộ điện thoại.</li>
+  <li>Bật thuật toán <strong>FSRS</strong> (bắt buộc, hiệu quả hơn SM-2 cũ 20–30%):
+    <ul>
+      <li>Trong Anki, bấm biểu tượng bánh răng cạnh Deck → <strong>Options</strong>.</li>
+      <li>Kéo xuống mục <strong>FSRS</strong> → gạt bật <strong>FSRS</strong>, giữ <em>Desired retention</em> ở mức <code>0.90</code>, mục <strong>New cards/day</strong> đặt <code>10</code> (hoặc <code>12</code>), <strong>Maximum reviews/day</strong> đặt <code>9999</code> (không ẩn thẻ tồn).</li>
+      <li>Ở phần <em>Display Order → New card gather order</em>, nếu dùng deck câu tăng dần (như Forkfed) thì chọn <strong>Deck / Ascending position</strong>.</li>
+    </ul>
+  </li>
+  <li>Cài <strong>AnkiMCP Add-on</strong> (chạy sẵn HTTP MCP server ngay bên trong Anki — <strong>không cần cài Node.js hay AnkiConnect riêng</strong>):
+    <ul>
+      <li>Mở Anki → <strong>Tools → Add-ons → Get Add-ons…</strong></li>
+      <li>Nhập mã: <code>124672614</code> → OK → <strong>khởi động lại Anki</strong>.</li>
+      <li>Mặc định server local tự chạy tại <code>http://127.0.0.1:3141/</code> mỗi khi Anki đang mở.</li>
+    </ul>
+  </li>
+  <li><em>(Tùy chọn nếu muốn có sẵn bộ thẻ chuẩn ngay):</em>
+    <ul>
+      <li><strong>Ưu tiên giao tiếp tự nhiên:</strong> tải <code>Forkfed_Chinese.apkg</code> từ <a href="https://github.com/oatlayers/forkfed/releases">oatlayers/forkfed</a> (7.326 câu có audio chuẩn, đã sửa 1.278 lỗi pinyin &amp; có biến điệu <code>PinyinSandhi</code>).</li>
+      <li><strong>Ưu tiên bám đề thi HSK 3.0:</strong> tải deck HSK 3.0 (2025) từ <a href="https://github.com/krmanik/Anki-xiehanzi">krmanik/Anki-xiehanzi</a> (hỗ trợ vẽ nét Hanzi Writer ngay trong thẻ).</li>
+      <li><strong>Hoặc không cần tải deck lớn:</strong> tạo 1 deck trống tên <code>Chinese::Daily</code> rồi để Agent (AGY/Codex) tự bơm 10 thẻ chuẩn HSK 3.0 mỗi ngày từ HSK MCP.</li>
+    </ul>
+  </li>
+</ol>
+<p class="note">
+  <strong>Mẹo hiển thị Anki:</strong> Nếu import deck lớn (như Forkfed hoặc Anki-xiehanzi), vào Browser chọn các thẻ chưa học bấm <strong>Toggle Suspend</strong> (<code>Ctrl+J</code>) nếu muốn tự mở khóa dần, và ẩn Pinyin ở mặt trước khi đã quen đọc chữ Hán.
+</p>
+
+<h3>Bước 2 — Cài bộ công cụ bổ trợ (Điện thoại + Windows + Chrome)</h3>
+<ul>
+  <li><strong>Điện thoại (iOS/Android):</strong> cài <a href="https://www.pleco.com/">Pleco</a> (tra viết tay), <a href="https://hanzii.net/">Hanzii</a> (nghĩa Việt + Hán–Việt), và <a href="https://www.hanlyapp.com/">Hanly</a> (học cấu tạo chữ Hán như xếp LEGO).</li>
+  <li><strong>Chrome / Edge trên Windows:</strong> cài extension <a href="https://github.com/cschiller/zhongwen/">Zhongwen</a> (hover chuột vào chữ Hán trên bất kỳ trang web nào là hiện Pinyin tô màu thanh điệu + nghĩa; bấm <code>G</code> để mở thẳng ngữ pháp).</li>
+  <li><strong>Bộ gõ Pinyin trên Windows:</strong> vào <em>Settings → Time &amp; language → Language &amp; region → Add a language → Chinese (Simplified, China)</em> để cài <strong>Microsoft Pinyin</strong>. Quy tắc nhớ nhanh: gõ <code>v</code> thay cho <code>ü</code> (ví dụ gõ <code>lv</code> ra <code>绿</code> / <code>女</code> gõ <code>nv</code>).</li>
+</ul>
+
+<h3>Bước 3 — Nối MCP vào AGY, Codex và ChatGPT Business</h3>
+<p>Ta dùng 2 MCP cốt lõi miễn phí không cần API key, cộng thêm 1 MCP TTS miễn phí ở local nếu muốn Agent tự đẻ file MP3 gắn vào Anki:</p>
+<ul>
+  <li><strong>AnkiMCP local:</strong> <code>http://127.0.0.1:3141/</code> (cần mở Anki Desktop khi dùng).</li>
+  <li><strong>HSK MCP Server (Remote HTTP, 0đ, 11.470 từ HSK 3.0 &amp; 2.0):</strong> <code>https://hsk-mcp.linsnotes.com/mcp</code> (kiểm tra sống/chết bằng <code>curl https://hsk-mcp.linsnotes.com/healthz</code>).</li>
+  <li><strong>TTS MCP (Local, sinh MP3 Edge-TTS miễn phí):</strong> cài bằng Python (tùy chọn):
+    <pre><code>pip install tts-mcp-server[edge]</code></pre>
+  </li>
+</ul>
+
+<h4>3A. Cấu hình cho Antigravity CLI (<code>agy</code>)</h4>
+<p>Mở (hoặc tạo) file cấu hình global <code>%USERPROFILE%\.gemini\config\mcp_config.json</code> và gộp các mục sau vào <code>mcpServers</code>:</p>
+<pre><code>{
+  "mcpServers": {
+    "anki": {
+      "url": "http://127.0.0.1:3141/"
+    },
+    "hsk": {
+      "url": "https://hsk-mcp.linsnotes.com/mcp"
+    },
+    "tts-server": {
+      "command": "tts-mcp",
+      "args": [],
+      "env": {
+        "TTS_OUTPUT_DIR": "D:\\chinese-audio"
+      }
+    }
+  }
+}</code></pre>
+<p class="note">Nhớ tạo trước thư mục <code>D:\chinese-audio</code> (hoặc đổi sang thư mục Đại Ca thích) nếu bật <code>tts-server</code>; không cài <code>tts-mcp-server</code> thì bỏ hẳn block <code>"tts-server"</code> đi, <code>anki</code> và <code>hsk</code> vẫn chạy độc lập.</p>
+
+<h4>3B. Cấu hình cho OpenAI Codex CLI</h4>
+<p>Chạy lần lượt trong PowerShell (tự ghi vào <code>~/.codex/config.toml</code>):</p>
+<pre><code>codex mcp add anki --url http://127.0.0.1:3141/
+codex mcp add hsk --url https://hsk-mcp.linsnotes.com/mcp
+codex mcp list</code></pre>
+<p>Nếu đã cài <code>tts-mcp-server[edge]</code>, thêm tiếp vào <code>~/.codex/config.toml</code>:</p>
+<pre><code>[mcp_servers.tts-server]
+command = "tts-mcp"
+args = []
+
+[mcp_servers.tts-server.env]
+TTS_OUTPUT_DIR = "D:\\chinese-audio"</code></pre>
+
+<h4>3C. Cấu hình cho ChatGPT Business Web &amp; App Voice</h4>
+<ol>
+  <li><strong>Bật Tunnel trong Anki:</strong> mở Anki → <strong>Tools → AnkiMCP Server Settings… → Connect Tunnel</strong> → đăng nhập OAuth 1 lần trên trình duyệt. Địa chỉ tunnel chung của Đại Ca sẽ là <code>https://tunnel.ankimcp.ai/mcp</code> (chỉ hoạt động khi đăng nhập đúng tài khoản OAuth của Đại Ca và Anki đang mở).</li>
+  <li><strong>Thêm vào ChatGPT Business Web (<code>chatgpt.com</code>):</strong>
+    <ul>
+      <li>Nếu chưa thấy nút tạo MCP, bật <strong>Developer mode</strong> trong <em>Settings → Security / Connectors</em> (lưu ý: trên workspace Business, quyền bật Developer mode &amp; thêm custom MCP do Admin/Owner workspace quản lý).</li>
+      <li>Vào <strong>Plugins / Apps &amp; Connectors → Add → Create MCP App</strong>:
+        <ul>
+          <li>Connector 1: Name <code>AnkiMCP</code> · Server URL <code>https://tunnel.ankimcp.ai/mcp</code> · Authentication: <strong>OAuth</strong> → Accept &amp; Grant Access.</li>
+          <li>Connector 2: Name <code>HSK-Dict</code> · Server URL <code>https://hsk-mcp.linsnotes.com/mcp</code> · Authentication: không cần / None.</li>
+          <li><em>(Tùy chọn):</em> Connector 3: Name <code>Chatterbox</code> · Server URL <code>https://mcp.chatterboxlabs.io/mcp</code> · Authentication: <strong>OAuth</strong> (tài khoản Chatterbox miễn phí).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Lưu ý riêng cho ChatGPT Voice:</strong> Theo tài liệu của AnkiMCP, trong app/web ChatGPT chọn <strong>Settings → Voice</strong>. Nếu chế độ <em>Live</em> không gọi được custom connector trong lúc nói, chuyển sang model <strong>Standard</strong> hoặc <strong>Advanced</strong>. Các thao tác ghi dữ liệu vào Anki có thể yêu cầu bấm nút xác nhận trên màn hình.</li>
+</ol>
+
+<h3>Bước 4 — Lưu sẵn 2 Prompt / Gem cố định cho ChatGPT Web &amp; Gemini Web</h3>
+<p>Tạo 1 Custom GPT / Project trên ChatGPT Business và 1 Gem trên <a href="https://gemini.google.com/">Gemini Web</a> với 2 prompt mẫu sau để dùng mỗi ngày không phải gõ lại:</p>
+
+<p><strong>Prompt 1 — Dùng cho ChatGPT Business (Voice &amp; AnkiMCP + HSK MCP):</strong></p>
+<pre><code>Bạn là gia sư tiếng Trung Phổ thông (Chuẩn HSK 3.0) cho người Việt bắt đầu từ số 0.
+Quy tắc bắt buộc:
+1. Chỉ nói tiếng Trung chậm, câu ngắn 4–8 chữ, CHỈ dùng các từ tôi đã học trong Anki (kiểm tra qua AnkiMCP) hoặc cấp HSK 1 hiện tại (tra qua HSK MCP).
+2. Khi tôi nói sai hoặc gõ sai, luôn làm đúng 3 bước bằng tiếng Việt ngắn gọn:
+   - Chỉ ra lỗi đặc trưng người Việt (như thêm 是 trước động từ, đặt sai vị trí 的, thiếu lượng từ, nhầm Hán–Việt).
+   - Viết và đọc lại câu tự nhiên nhất kèm Pinyin có dấu thanh và âm Hán–Việt (nếu có).
+   - Hỏi tiếp 1 câu cực ngắn để tôi phản xạ nói lại.
+3. Không khen chung chung nếu câu sai ngữ pháp; cuối buổi tóm tắt các lỗi sai để đẩy vào Anki khi tôi yêu cầu.</code></pre>
+
+<p><strong>Prompt 2 — Dùng cho Gemini Web (Upload file audio <code>.mp3</code> / <code>.wav</code>):</strong></p>
+<pre><code>Tôi là người Việt mới học tiếng Trung (HSK 1–2). Hãy nghe kỹ file âm thanh đính kèm:
+- Nếu đây là audio bài học/bản xứ: chép lại chính xác từng câu theo thứ tự (Chữ Hán | Pinyin đúng thanh điệu | Nghĩa tiếng Việt | Âm Hán–Việt), đánh dấu chỗ có biến điệu (thanh 3+3, 不, 一, thanh nhẹ) và giải thích điểm ngữ pháp khác tiếng Việt.
+- Nếu đây là file tôi tự đọc kèm văn bản gốc bên dưới: liệt kê từng chữ tôi bị nuốt âm, đọc sai thanh mẫu (nhất là zh/ch/sh/r vs z/c/s, j/q/x, bật hơi p/t/k/q/ch/c) hoặc thiếu tròn môi ở âm ü.</code></pre>
+
+<h3>Bước 5 — Smoke test sau khi Setup (3 phút)</h3>
+<ul>
+  <li class="box">☐ Anki mở sẵn, FSRS đã bật, <code>curl http://127.0.0.1:3141/</code> hoặc lệnh hỏi <code>"listDecks"</code> trên AGY/Codex trả về danh sách deck thật.</li>
+  <li class="box">☐ Thử hỏi AGY/Codex: <em>"Dùng hsk-mcp tra từ 方便 và tìm 5 từ HSK 1 đầu tiên theo tần suất"</em> — trả về dữ liệu có pinyin, lượng từ, bộ thủ.</li>
+  <li class="box">☐ Trên ChatGPT Business Web: mở chat mới, tag <code>@AnkiMCP</code> → gõ <code>fetch anki decks</code> thấy đúng tên deck trên máy.</li>
+  <li class="box">☐ Đọc to thử 1 từ trên <a href="https://mandarinthewild.com/">Mandarin The Wild</a> thấy trình duyệt vẽ được đường cao độ giọng nói.</li>
+</ul>
+
+<h2 id="traps">3. 4 Cái Bẫy Người Việt Phải Chặn Ngay Từ Tuần 1</h2>
+<p>Số liệu âm học bằng Praat trên 42 sinh viên Việt Nam (ICA, 01/2026) cho thấy lỗi thanh điệu chiếm <strong>40,6%</strong>, thanh mẫu <strong>34,4%</strong>, vận mẫu <strong>25%</strong>. Đọc thuộc bảng dưới trước khi cày từ vựng:</p>
+
+<table>
+  <tr><th>Cái bẫy hay gặp</th><th>Thực tế tiếng Trung</th><th>Cách sửa nhanh (tự test tại nhà)</th></tr>
+  <tr>
+    <td><strong>1. Đọc Pinyin theo chữ Quốc ngữ</strong></td>
+    <td><code>d</code> ≈ <code>t</code> Việt; <code>t</code> ≈ <code>th</code>; <code>h</code> ≈ <code>kh</code>; <code>c</code> = <code>ts</code> bật hơi; <code>x</code> mặt lưỡi sau răng dưới; <code>r</code> uốn lưỡi êm (không phải <em>d/gi</em> Bắc).</td>
+    <td>Đặt <strong>tờ giấy mỏng trước miệng</strong>: đọc 6 âm bật hơi <code>p, t, k, q, ch, c</code> giấy phải rung mạnh; đọc <code>b, d, g, j, zh, z</code> giấy đứng yên.</td>
+  </tr>
+  <tr>
+    <td><strong>2. Nhầm <code>zh/ch/sh</code> với <code>z/c/s</code> và thiếu <code>ü</code></strong></td>
+    <td><code>zh/ch/sh/r</code> bắt buộc cong đầu lưỡi lên vòm cứng; sau <code>zh/ch/sh/r/z/c/s</code>, chữ <code>i</code> đọc gần <code>ư</code>. Âm <code>ü</code> (trong <code>女 nǚ</code>, <code>去 qù</code>, <code>学 xué</code>) là lưỡi ở <code>i</code> nhưng tròn môi như <code>u</code>.</td>
+    <td>Luyện các cặp tối thiểu: <code>是 shì</code> vs <code>四 sì</code>; <code>知 zhī</code> vs <code>鸡 jī</code>; <code>吃 chī</code> vs <code>七 qī</code>; <code>路 lù</code> vs <code>绿 lǜ</code>.</td>
+  </tr>
+  <tr>
+    <td><strong>3. Gán dấu Việt vào 4 thanh điệu</strong></td>
+    <td><strong>Thanh 4 (à)</strong> rơi gắt từ đỉnh xuống (KHÔNG phải dấu huyền). <strong>Thanh 3 (ǎ)</strong> khi đứng trước thanh khác chỉ đọc <strong>nửa thanh thấp</strong>; hai thanh 3 liền nhau thì thanh đầu đổi sang thanh 2 (<code>你好 → ní hǎo</code>).</td>
+    <td>Không luyện thanh đơn lẻ lâu — chuyển thẳng sang luyện <strong>20 cặp thanh điệu (Tone Pairs)</strong> và nhìn đường F0 trên <a href="https://mandarinthewild.com/">Mandarin The Wild</a>.</td>
+  </tr>
+  <tr>
+    <td><strong>4. Tin mù âm Hán–Việt &amp; đặt sai <code>的</code></strong></td>
+    <td>Quy luật Hán–Việt giúp đoán ~2.251 từ HSK 3.0 (xem <a href="https://nhaihsk.com/sound-rules">bảng chuyển âm Nhai HSK</a>), nhưng có nhóm <strong>từ giả bạn</strong> đổi nghĩa hẳn (<code>大家</code> = mọi người, <code>便宜</code> = rẻ, <code>医生</code> = bác sĩ). Định ngữ tiếng Trung luôn đứng <strong>trước</strong> danh từ (<code>我的书</code> = tôi của sách).</td>
+    <td>Đọc qua danh sách <a href="https://hanyustep.com/han-viet-danh-lua">47 từ Hán–Việt đánh lừa</a> trên HanyuStep và luôn tra chéo câu ví dụ trong Pleco / HSK MCP.</td>
+  </tr>
+</table>
+
+<h2 id="daily">4. Hằng Ngày Làm Gì? (Lịch chuẩn 60 phút / ngày)</h2>
+
+<h3>Pha A — 2 tuần đầu (Ngày 1–14): Khóa Phát âm &amp; 20 Cặp Thanh Điệu</h3>
+<p class="warn">Đừng ham nạp 30–50 từ/ngày ở 2 tuần này. Phát âm và thanh điệu bị đóng băng sai ngay tháng đầu về sau sửa cực khổ.</p>
+<table>
+  <tr><th>Thời lượng</th><th>Làm gì &amp; Dùng cái nào</th><th>Tiêu chuẩn hoàn thành trong ngày</th></tr>
+  <tr>
+    <td><strong>25 phút</strong></td>
+    <td><strong>Pinyin + Khẩu hình:</strong> Mở <a href="https://yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">Yoyo Pinyin Chart</a> (tài khoản free để xem video khẩu hình) + <a href="https://nomto.app/vi/hsk/articles/phat-am-tieng-trung">bài phát âm Nomto</a>. Tuần 1 đi hết 21 thanh mẫu + 36 vận mẫu; Tuần 2 tập trung cặp khó &amp; biến điệu <code>3+3</code>, <code>不</code>, <code>一</code>.</td>
+    <td>Đọc phân biệt được bằng giấy trước miệng các cặp bật hơi và không đọc <code>d/t/q/x/c</code> theo tiếng Việt.</td>
+  </tr>
+  <tr>
+    <td><strong>20 phút</strong></td>
+    <td><strong>Soi F0 &amp; Cặp thanh điệu:</strong> Mở <a href="https://mandarinthewild.com/">Mandarin The Wild</a> → mục <em>Tone Pairs</em> (20 cặp) + <em>Tone Practice</em> + <em>Minimal Pairs</em>.</td>
+    <td>Đường pitch giọng mình bám sát hình dáng đường mẫu (đặc biệt thanh 1 phẳng cao, thanh 4 dốc gắt, thanh 3 nửa thanh).</td>
+  </tr>
+  <tr>
+    <td><strong>15 phút</strong></td>
+    <td><strong>Làm quen chữ Hán &amp; Tai nghe:</strong> Mở <a href="https://www.hanlyapp.com/">Hanly</a> học 5–10 bộ thủ/chữ cơ bản nhất + xem 1 clip ngắn trên <a href="https://chinese.littlefox.com/en">Little Fox Chinese</a> hoặc playlist <em>HSK 1 Stories</em> của <strong>Mandarin Click</strong>.</td>
+    <td>Hiểu nguyên lý ghép mảnh chữ Hán và quen tai nghe thanh điệu trong ngữ cảnh thật.</td>
+  </tr>
+</table>
+
+<h3>Pha B — Từ Tuần 3 trở đi (Ngày 15+): Vòng lặp Tăng tốc 60 phút / ngày</h3>
+<p>Có thể làm liền 1 mạch buổi tối hoặc cắt đôi 25 phút sáng + 35 phút tối. <strong>Giữ đúng nhịp 10–12 từ mới/ngày</strong> để không bị vỡ thẻ ôn.</p>
+
+<table>
+  <tr><th>Block</th><th>Việc phải làm mỗi ngày</th><th>Công cụ sử dụng</th></tr>
+  <tr>
+    <td><strong>10 phút</strong><br><em>Nạp từ + Audio</em></td>
+    <td>
+      Mở Anki Desktop + chạy <strong>AGY</strong> hoặc <strong>Codex</strong> (hoặc dùng deck Forkfed / Anki-xiehanzi có sẵn):<br>
+      • Yêu cầu Agent gọi <code>hsk_suggest_next</code> lấy đúng <strong>10 từ tiếp theo</strong> của HSK 3.0.<br>
+      • Cho Agent viết 10 câu ví dụ ngắn <code>i+1</code> (kèm Hán–Việt, chiết tự bộ thủ, lưu ý ngữ pháp), sinh MP3 bằng <code>tts-mcp</code> (nếu cài) và đẩy vào deck <code>Chinese::Daily</code> qua <code>AnkiMCP</code>.
+    </td>
+    <td>AGY / Codex<br>+ HSK MCP<br>+ AnkiMCP<br><em>(hoặc <a href="https://nhaihsk.com/">Nhai HSK</a>)</em></td>
+  </tr>
+  <tr>
+    <td><strong>15 phút</strong><br><em>Ôn Anki + Gõ Pinyin</em></td>
+    <td>
+      • <strong>10 phút Anki (FSRS):</strong> Trả hết thẻ đến hạn trước khi học thẻ mới. Nghe audio và <strong>đọc to thành tiếng theo từng câu</strong>. Tắt Pinyin ở mặt trước ngay khi đã quen chữ.<br>
+      • <strong>5 phút <a href="https://www.typingchinese.club/">TypingChinese</a></strong> (hoặc gõ Microsoft Pinyin): gõ lại 10 từ mới vừa học ở chế độ dictation/follow-typing để khóa phản xạ <em>Âm → Mặt chữ</em>.
+    </td>
+    <td>Anki Desktop / AnkiDroid<br>+ TypingChinese<br>+ Hanly (xem thêm 5 chữ/ngày)</td>
+  </tr>
+  <tr>
+    <td><strong>20 phút</strong><br><em>Nghe hiểu + Đọc phân cấp</em></td>
+    <td>
+      • <strong>12 phút Nghe CI (Comprehensible Input):</strong> Xem 1 video trình độ phù hợp trên YouTube (<strong>Mandarin Click</strong> → <strong>Slow &amp; Clear Chinese</strong> → <strong>Lazy Chinese</strong>). Lượt 1 nghe không sub Việt/Anh; lượt 2 bật sub Hán và <strong>nhại đuổi (shadowing)</strong> theo tốc độ người nói.<br>
+      • <strong>8 phút Đọc:</strong> Đọc 1 bài ngắn trên <a href="https://mandarinbean.com/">Mandarin Bean</a> (tắt Pinyin, từ nào quên mới chạm tra).
+    </td>
+    <td>YouTube CI channels<br>+ Mandarin Bean<br>+ Zhongwen extension</td>
+  </tr>
+  <tr>
+    <td><strong>15 phút</strong><br><em>Nói phản xạ + Kiểm tra lỗi</em></td>
+    <td>
+      • Mở <strong>ChatGPT Business Voice</strong> (chọn <em>Standard/Advanced</em> nếu Live không gọi connector, bật <code>AnkiMCP</code> + <code>HSK-Dict</code>): nói hội thoại role-play quanh 10–20 từ đang học trong Anki.<br>
+      • <em>2–3 lần/tuần:</em> Ghi âm lại đoạn Đại Ca đọc bài khóa Mandarin Bean (1–2 phút), upload file <code>.wav/.mp3</code> lên <strong>Gemini Web</strong> để nó rà lỗi nuốt âm/bật hơi, và đối chiếu thanh điệu lại bằng F0 trên Mandarin The Wild.
+    </td>
+    <td>ChatGPT Business Voice<br>+ Gemini Web<br>+ Mandarin The Wild</td>
+  </tr>
+</table>
+
+<h3>Pha C — Nâng cấp khi vào HSK 3+ (Tháng thứ 4–6 trở đi)</h3>
+<ul>
+  <li>Chuyển phần đọc sang tài liệu thật bằng bộ 3 open-source miễn phí: cài extension <a href="https://github.com/yomidevs/yomitan">Yomitan</a> + từ điển <a href="https://github.com/MarvNC/cc-cedict-yomitan">cc-cedict-yomitan</a> (tra 1 hover &amp; đẩy thẳng sang Anki), dùng <a href="https://github.com/asbplayer/asbplayer">asbplayer</a> cắt câu từ YouTube/phim, hoặc tự host <a href="https://github.com/luteorg/lute-v3">Lute v3</a> để đọc truyện dài.</li>
+  <li>Khi cần nói trôi chảy áp lực thời gian thật: thuê gia sư bản xứ 1 buổi/tuần trên italki hoặc trao đổi ngôn ngữ qua HelloTalk/Tandem để hiệu chỉnh khẩu hình mà AI không nghe ra hết.</li>
+</ul>
+
+<h2 id="prompts">5. Kho Câu Lệnh Mẫu Copy-Paste Hằng Ngày (AGY / Codex / ChatGPT)</h2>
+
+<h3>5.1. Lệnh buổi sáng/tối trên AGY hoặc Codex — Soạn &amp; nạp 10 thẻ mới HSK 3.0</h3>
+<pre><code>Hãy mở AnkiMCP lấy danh sách các từ tôi đã có trong deck "Chinese::Daily" (hoặc kiểm tra thẻ đang có).
+Sau đó gọi hsk_suggest_next ở cấp HSK 1 (scheme="new") để chọn ra 10 từ mới tiếp theo tôi chưa biết.
+Với mỗi từ:
+1. Dùng hsk_lookup và hsk_classifier lấy pinyin, bộ thủ, lượng từ (nếu là danh từ) và nghĩa chuẩn.
+2. Viết 1 câu ví dụ thật ngắn (tối đa 8 chữ, kiểu i+1 dùng từ dễ), kèm pinyin, âm Hán–Việt từng chữ, nghĩa tiếng Việt và 1 dòng ghi chú ngắn bẫy phát âm/ngữ pháp cho người Việt.
+3. Nếu tts-server đang bật, sinh file audio MP3 cho từng câu ví dụ vào thư mục audio rồi import vào Anki bằng storeMediaFile.
+4. Gọi addNotes đẩy 10 thẻ vào deck "Chinese::Daily" (báo cáo preview trước khi ghi nếu cần).</code></pre>
+
+<h3>5.2. Lệnh cuối tuần trên AGY hoặc Codex — Chữa các từ hay quên ("Leech Review")</h3>
+<pre><code>Dùng AnkiMCP tìm tối đa 15 thẻ có số lần quên (lapses) cao nhất hoặc độ ổn định thấp nhất trong deck tiếng Trung của tôi.
+Phân tích nguyên nhân dễ nhầm cho từng từ (chiết tự bộ thủ, so sánh chữ na ná nhau, cặp từ dễ lẫn thanh điệu, hoặc Hán–Việt đánh lừa).
+Viết lại câu ví dụ mới sinh động hơn để thay thế hoặc bổ sung vào ghi chú của các thẻ đó.</code></pre>
+
+<h3>5.3. Lệnh trên ChatGPT Business Voice — Khảo bài &amp; Hội thoại theo đúng vốn từ Anki</h3>
+<pre><code>Dùng AnkiMCP lấy 10 thẻ đang đến hạn hoặc mới thêm gần nhất trong deck tiếng Trung của tôi.
+Đóng vai nhân viên quán ăn / đồng nghiệp Trung Quốc, trò chuyện với tôi bằng giọng nói chậm và câu cực ngắn CHỈ xoay quanh 10 từ đó cộng với từ HSK 1 cơ bản nhất.
+Mỗi lượt chỉ hỏi 1 câu. Nếu tôi nói sai ngữ pháp (đặc biệt lỗi tiếng Việt), sửa ngắn gọn bằng tiếng Việt rồi bắt tôi lặp lại câu đúng. Cuối buổi hỏi tôi muốn rate_card từng thẻ thế nào trước khi ghi về Anki.</code></pre>
+
+<h2 id="troubleshoot">6. Xử Lý Lỗi Thường Gặp</h2>
+<table>
+  <tr><th>Triệu chứng</th><th>Nguyên nhân</th><th>Cách xử lý nhanh</th></tr>
+  <tr>
+    <td>AGY / Codex / ChatGPT báo không kết nối được <code>AnkiMCP</code></td>
+    <td>Anki Desktop chưa mở, hoặc Anki bản cũ &lt; 25.x, hoặc chưa bật Tunnel cho ChatGPT Web.</td>
+    <td>Mở Anki Desktop; kiểm tra phiên bản ≥ 25.x; với ChatGPT Web vào <em>Tools → AnkiMCP Server Settings… → Connect Tunnel</em> kiểm tra trạng thái đang Connected.</td>
+  </tr>
+  <tr>
+    <td>ChatGPT Business không thấy nút <em>Create MCP App</em></td>
+    <td>Workspace Business bị Admin tắt Developer mode hoặc chặn custom MCP connector của thành viên.</td>
+    <td>Nhờ Admin bật Developer mode trong workspace Business, <strong>hoặc bỏ qua bước nối Web</strong> — chạy toàn bộ AnkiMCP + HSK MCP trên <strong>AGY / Codex CLI</strong> ở máy local (vẫn đầy đủ 100% tính năng).</td>
+  </tr>
+  <tr>
+    <td>ChatGPT Voice nói chuyện bình thường nhưng không gọi được AnkiMCP</td>
+    <td>Chế độ <em>Live</em> đôi lúc bỏ qua custom connector hoặc cần duyệt quyền ghi trên màn hình.</td>
+    <td>Chuyển Voice model sang <strong>Standard</strong> hoặc <strong>Advanced</strong> (theo khuyến cáo tài liệu AnkiMCP), và test gọi thử bằng text <code>@AnkiMCP fetch anki decks</code> trước khi bật mic.</td>
+  </tr>
+  <tr>
+    <td>Bị dồn 200+ thẻ Anki sau vài ngày bận nghỉ học</td>
+    <td>Mở lại thấy ngập thẻ cũ → dễ nản bỏ ngang.</td>
+    <td>Trong Anki, đặt tạm <strong>New cards/day = 0</strong> trong 3–5 ngày cho đến khi dọn sạch thẻ tồn; hoặc dùng Add-on <em>FSRS Helper → Postpone</em> để rải đều thẻ tồn ra nhiều ngày. Tuyệt đối không học thẻ mới khi thẻ tồn chưa về 0.</td>
+  </tr>
+  <tr>
+    <td>Dùng <code>tts-mcp</code> báo lỗi không ra MP3 hoặc Windows không tìm thấy lệnh</td>
+    <td>Chưa cài gói <code>[edge]</code> hoặc Script folder của Python chưa có trong <code>PATH</code>.</td>
+    <td>Chạy kiểm tra <code>where.exe tts-mcp</code> trong PowerShell; nếu chưa thấy thì trỏ <code>command</code> trong <code>mcp_config.json</code> / <code>config.toml</code> thẳng tới file <code>tts-mcp.exe</code> trong thư mục <code>Scripts</code> của Python/venv.</td>
+  </tr>
+</table>
+
+<h2 id="sources">7. Nguồn &amp; Tài Liệu Đã Kiểm Chứng (11/2026)</h2>
+<ul>
+  <li>HSK 3.0 Syllabus (công bố 11/2025, hiệu lực 07/2026, thi đại trà cấp 1–6 từ 13/12/2026): <a href="https://studycli.org/hsk/the-new-hsk/">StudyCLI HSK 3.0 Guide</a>, <a href="https://hskexam.org/guides/hsk-3-0-vs-current-hsk/">HSK Exam Guide</a>.</li>
+  <li>Nghiên cứu phát âm &amp; bẫy người Việt: <a href="https://ica.org.vn/anh-huong-cua-chuyen-di-tieu-cuc-tu-tieng-me-de-den-phat-am-tieng-trung-cua-nguoi-hoc-viet-nam-bang-chung-tu-khao-sat-va-can-thiep-ngu-am/">Nghiên cứu Praat 42 SV Việt Nam (ICA, 01/2026)</a>, <a href="https://nomto.app/vi/hsk/articles/phat-am-tieng-trung">Nomto Phát âm</a>, <a href="https://nhaihsk.com/sound-rules">Nhai HSK Quy tắc Hán–Việt (9.721 chữ)</a>, <a href="https://hanyustep.com/han-viet-danh-lua">HanyuStep 47 từ Hán–Việt đánh lừa</a>.</li>
+  <li>Phương pháp SLA &amp; Input: <a href="https://www.hackingchinese.com/archive-2/beginner/">Hacking Chinese Beginner Guide</a>, <a href="https://refold.la/how-to-learn-mandarin">Refold Mandarin</a>, <a href="https://heavenlypath.notion.site/Our-Favourite-Resources-70c27a644108448e9485bc49bfebc5b9">Heavenly Path</a>, <a href="https://resources.allsetlearning.com/chinese/grammar/Main_Page">Chinese Grammar Wiki</a>.</li>
+  <li>MCP &amp; Open-source repos: <a href="https://github.com/ankimcp/anki-mcp-server/">AnkiMCP Server</a> (<a href="https://ankimcp.ai/blog/anki-mcp-server-addon-release/">Add-on 124672614 docs</a>, <a href="https://ankimcp.ai/docs/how-to/review-anki-by-voice/">Review by Voice</a>), <a href="https://github.com/kuibinlin/hsk-mcp-server">HSK MCP Server</a>, <a href="https://github.com/Gollum-code/tts-mcp-server">tts-mcp-server</a>, <a href="https://github.com/oatlayers/forkfed">Forkfed</a>, <a href="https://github.com/krmanik/Anki-xiehanzi">Anki-xiehanzi</a>, <a href="https://github.com/CodeTrainerMan/typingchinese">TypingChinese</a>, <a href="https://github.com/cschiller/zhongwen/">Zhongwen</a>, <a href="https://github.com/yomidevs/yomitan">Yomitan</a> + <a href="https://github.com/MarvNC/cc-cedict-yomitan">cc-cedict-yomitan</a>, <a href="https://github.com/asbplayer/asbplayer">asbplayer</a>, <a href="https://github.com/luteorg/lute-v3">Lute v3</a>.</li>
+  <li>Giới hạn giọng nói AI &amp; Audio Web: <a href="https://support.google.com/gemini/answer/16047373?hl=en">Gemini Apps Audio/Upload</a>, <a href="https://pixel-townai.com/blog/chatgpt-voice-for-language-learning">ChatGPT Voice Guide (10/2026)</a>, <a href="https://mcptest.io/learn/use-mcp-connectors-on-phone-and-by-voice">MCP on Voice &amp; Business Plan Notes (11/2026)</a>.</li>
+</ul>
+
+</body>
+</html>
